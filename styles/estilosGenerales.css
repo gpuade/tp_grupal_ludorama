@@ -31,6 +31,10 @@ body::before {
   z-index: -1;
 }
 
+/* Para evitar que el fondo se muestre en ciertas páginas */
+body.no-background::before {
+  display: none;
+}
 
 
 /*-------------------------------*/
@@ -255,8 +259,7 @@ img {
 }
 
 .contenedor-construccion {
-  min-height: 90vh; /* ajustá el número según qué tan alto lo querés */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 90vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
