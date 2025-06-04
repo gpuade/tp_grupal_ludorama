@@ -20,9 +20,10 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../img/fondo_v2.png");
-  background-size: contain;
-  background-repeat: round;
+  background-image: url("../img/fondo_v2_ancho.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-repeat: round;*/
   background-position: center;
   background-attachment: fixed;
   opacity: 0.45;
@@ -227,3 +228,35 @@ img {
 }
 
 /*----------------------------------*/
+/* Hero Section */
+.hero-ludorama {
+  background-image: url('../img/parque-arriba.png');
+  background-size: cover;
+  background-position: center top 20%; /* 👈 esto baja visualmente la imagen */
+  height: 50vh;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-ludorama::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.35); /* Oscurece para que el texto se lea */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.contenedor-construccion {
+  min-height: 90vh; /* ajustá el número según qué tan alto lo querés */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
