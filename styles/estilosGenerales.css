@@ -265,3 +265,17 @@ img {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+/*----------------------------------*/
+/*Navbar*/
+.btn-entradas-navbar {
+  background-color: #44f9b7;
+  color: #2c2c2c;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-entradas-navbar:hover {
+  background-color: #ffffff;
+  color: #2c2c2c;
+}
