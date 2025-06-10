@@ -6,11 +6,41 @@ nav{
 /*----Footer----*/
 footer{
     background-color: #1D4068;
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 .Logo_uade{
     width: 4em;
     height: 4em;
 }
+
+
+
+@media (min-width: 768px) {
+  /* Estilos para tablet y escritorio */
+  .vistaFooterTabletEscritorio {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .aNavFooter{
+    font-size: 1.2em;
+    list-style-type: disc;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Estilos para tablet y escritorio */
+  .vistaFooterMobile{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .aNavFooter{
+    font-size: 1.0em;
+    list-style-type: disc;
+
+  }
+}
+
 
