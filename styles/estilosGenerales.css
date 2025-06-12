@@ -329,7 +329,16 @@ img {
   background-color: #FFFFFF;
   color: #1D4068;
   transform: rotateY(180deg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
 
+
+.flip-card-back img {
+  max-height: 160px;
+  object-fit: cover;
 }
 
 .flip-card-front.toboganopolis { background-color: #F39C12; } /* naranja */
@@ -338,6 +347,42 @@ img {
 .flip-card-front.cuentopolis { background-color: #E74C3C; }   /* rojo */
 .flip-card-front.descansopolis { background-color: #3498DB; } /* celeste */
 .flip-card-front.agualopolis { background-color: #1ABC9C; }   /* turquesa */
+
+.actividad-flip-back {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.actividad-img {
+  flex: 2; /* parte superior */
+  object-fit: cover;
+  object-position: center 10%;
+  width: 100%;
+}
+
+.actividad-info {
+  background-color: #F39C12;
+  padding: 1rem;
+  flex: 1; /* parte inferior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.actividad-info2 {
+  background-color: #27AE60;
+  padding: 1rem;
+  flex: 1; /* parte inferior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.actividad-info h4,
+.actividad-info p {
+  color: white;
+}
 
 
 /*----------------------------------*/

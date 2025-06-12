@@ -61,21 +61,26 @@
     
       <section class="container my-5">
         <div class="row justify-content-center">
-          <!-- Toboganópolis -->
-            <div class="col-md-4 mb-4">
-                <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front toboganopolis d-flex flex-column justify-content-center align-items-center">
-                            <h4>🎢 ¡Cliqueá para más diversión!</h4>
-                        </div>
-                        <div class="flip-card-back text-center p-3">
-                            <img src="../img/toboganopolis.png" class="img-fluid mb-2 rounded" alt="Toboganópolis">
-                            <h5 class="fw-bold">Toboganópolis</h5>
-                            <p>Energía, movimiento, adrenalina.<br>Camas elásticas, toboganes infinitos y puentes colgantes.</p>
-                        </div>
-                    </div>
+        <!-- Tarjeta estilo "Toboganópolis" CON efecto flip y diseño como imagen enviada -->
+          <div class="col-md-4 mb-4">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front toboganopolis d-flex flex-column justify-content-center align-items-center">
+                  <h4>🎢 ¡Cliqueá para más diversión!</h4>
                 </div>
+                <div class="flip-card-back p-0">
+                  <div class="actividad-flip-back">
+                    <img src="../img/toboganopolis.png" class="img-fluid w-100 actividad-img" alt="Toboganópolis">
+                    <div class="actividad-info p-3 text-white">
+                      <h4 class="fw-bold mb-2">Toboganópolis</h4>
+                      <p class="mb-0">Energía, movimiento, adrenalina. Camas elásticas, toboganes infinitos y puentes colgantes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
 
           <!-- Desafiópolis -->
           <div class="col-md-4 mb-4">
@@ -84,13 +89,17 @@
                       <div class="flip-card-front desafiopolis d-flex flex-column justify-content-center align-items-center">
                           <h4>⚡¡Aceptá el desafío!</h4>
                       </div>
-                      <div class="flip-card-back text-center p-3">
-                          <img src="../img/Desafiópolis.jpg" class="img-fluid mb-2 rounded" alt="Desafiópolis">
-                          <h5 class="fw-bold">Desafiópolis</h5>
-                          <p>Superación, aventura, destreza.<br>Pared de escalada, carrera de obstáculos y tirolesa.</p>
-                      </div>
+                      <div class="flip-card-back p-0">
+                        <div class="actividad-flip-back">
+                          <img src="../img/Desafiópolis.png" class="img-fluid w-100 actividad-img" alt="Toboganópolis">
+                        <div class="actividad-info2 p-3 text-white">
+                          <h4 class="fw-bold mb-2">Desafiópolis</h4>
+                          <p class="mb-0">Superación, aventura, destreza. Pared de escalada, carrera de obstaculos y tirolesa.</p>
+                    </div>
                   </div>
+                </div>
               </div>
+            </div>
           </div>
 
           <!-- Ludópolis -->
