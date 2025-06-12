@@ -11,6 +11,8 @@
     <title>Ludorama</title>
     <link rel="icon" type="image/png" href="../img/favicon_v4.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
 <body class="d-flex flex-column min-vh-100 no-background">
@@ -62,105 +64,45 @@
 
     <main class="p-2 flex-grow-2 contenedor-construccion">
     
-      <section class="container my-5">
-        <div class="row justify-content-center">
-          <!-- Toboganópolis -->
-            <div class="col-md-4 mb-4">
-                <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front toboganopolis d-flex flex-column justify-content-center align-items-center">
-                            <h4>🎢 ¡Cliqueá para más diversión!</h4>
-                        </div>
-                        <div class="flip-card-back text-center p-3">
-                            <img src="../img/toboganopolis.png" class="img-fluid mb-2 rounded" alt="Toboganópolis">
-                            <h5 class="fw-bold">Toboganópolis</h5>
-                            <p>Energía, movimiento, adrenalina.<br>Camas elásticas, toboganes infinitos y puentes colgantes.</p>
+        <section class="container my-5">
+            
+            <h2 class="fw-bold text-center p-3">Sobre el Parque</h2>
+            <div class="row align-items-stretch">
+                <div class="col-lg-10">
+                            <div class="ticket-card p-4 border rounded bg-light">
+                                <strong><h5 class="fw-bold text-center">¿Cómo llegar a Ludorama?</h5></strong>
+                                <p class="h6">Ubicación:<br>
+                                                Ludorama se encuentra estratégicamente ubicado cerca de la Costanera Norte de la Ciudad Autónoma de Buenos Aires, en una zona de fácil acceso tanto para quienes vienen desde el centro como desde zonas suburbanas.<br><br>
+
+                                                🚗 En auto:<br>
+                                                Podés llegar por Av. Rafael Obligado (Costanera Norte), con ingreso directo a través de calles señalizadas. Contamos con playa de estacionamiento con capacidad para vehículos particulares, combis escolares y transporte turístico.<br><br>
+
+                                                🚍 En transporte público:<br>
+                                                Colectivos cercanos: Líneas 33, 37, 45, 160<br>
+                                                Estaciones de tren más cercanas: Belgrano C (Ferrocarril Mitre)<br>
+                                                Bicicletas: Hay estaciones de Ecobici a pocas cuadras del ingreso.<br><br>
+
+                                                📌 Referencias cercanas:<br>
+                                                A pocos minutos del Aeroparque Jorge Newbery, y frente al Río de la Plata, Ludorama combina naturaleza, vista abierta y un entorno ideal para pasar el día al aire libre.<br>
+                                </p>
+
+                            </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="calendario-container p-4 border rounded bg-light">
+                            <h2 id="mes-actual"></h2>
+                            <div id="calendario" class="calendario-grid"></div>
                         </div>
                     </div>
                 </div>
+
+                
             </div>
 
-          <!-- Desafiópolis -->
-          <div class="col-md-4 mb-4">
-              <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                  <div class="flip-card-inner">
-                      <div class="flip-card-front desafiopolis d-flex flex-column justify-content-center align-items-center">
-                          <h4>⚡¡Aceptá el desafío!</h4>
-                      </div>
-                      <div class="flip-card-back text-center p-3">
-                          <img src="../img/Desafiópolis.jpg" class="img-fluid mb-2 rounded" alt="Desafiópolis">
-                          <h5 class="fw-bold">Desafiópolis</h5>
-                          <p>Superación, aventura, destreza.<br>Pared de escalada, carrera de obstáculos y tirolesa.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
 
-          <!-- Ludópolis -->
-          <div class="col-md-4 mb-4">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')">
-              <div class="flip-card-inner">
-                  <div class="flip-card-front ludopolis d-flex flex-column justify-content-center align-items-center">
-                      <h4>🎲 ¡Animate a Jugar!</h4>
-                  </div>
-                  <div class="flip-card-back text-center p-3">
-                      <img src="../img/Ludópolis.jpg" class="img-fluid mb-2 rounded" alt="Ludópolis">
-                      <h5 class="fw-bold">Ludópolis</h5>
-                      <p>Juegos de estrategia y creatividad compartida.<br>Ajedrez humano, jenga gigante y dados de historias.</p>
-                  </div>
-              </div>
-          </div>
-          </div>
-
-                    <!-- Cuentópolis -->
-          <div class="col-md-4 mb-4">
-            <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front cuentopolis d-flex flex-column justify-content-center align-items-center">
-                        <h4>📖 ¡Viví el cuento!</h4>
-                    </div>
-                    <div class="flip-card-back text-center p-3">
-                        <img src="../img/Cuentópolis.jpg" class="img-fluid mb-2 rounded" alt="Cuentópolis">
-                        <h5 class="fw-bold">Cuentópolis</h5>
-                        <p>Arte, expresión, imaginación.<br>Shows espontáneos, cuentacuentos y espectáculos familiares.</p>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <!-- Descansópolis -->
-          <div class="col-md-4 mb-4">
-                <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front descansopolis d-flex flex-column justify-content-center align-items-center">
-                            <h4>🌳 ¡Relax acá!</h4>
-                        </div>
-                        <div class="flip-card-back text-center p-3">
-                            <img src="../img/Descansópolis.jpg" class="img-fluid mb-2 rounded" alt="Descansópolis">
-                            <h5 class="fw-bold">Descansópolis</h5>
-                            <p>Pausa, bienestar, conexión.<br>Zona de picnic, sombra, relax y juegos tranquilos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                    <!-- Agualópolis -->
-          <div class="col-md-4 mb-4">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')">
-              <div class="flip-card-inner">
-                  <div class="flip-card-front agualopolis d-flex flex-column justify-content-center align-items-center">
-                      <h4>💧 ¡Hacé clic y refrescate!</h4>
-                  </div>
-                  <div class="flip-card-back text-center p-3">
-                      <img src="../img/Agualópolis.jpg" class="img-fluid mb-2 rounded" alt="Agualópolis">
-                      <h5 class="fw-bold">Agualópolis</h5>
-                      <p>Frescura, juego libre, diversión refrescante.<br>Fuente interactiva con juegos de agua.</p>
-                  </div>
-              </div>
-          </div>
-        </div>       
-      </section>
-
+        </section>
 
     </main>
 
@@ -190,7 +132,6 @@
                         <li><a href="../index.html" class="text-white text-decoration-none aNavFooter">Inicio</a></li>
                         <li><a href="../pages/sobre.html" class="text-white text-decoration-none aNavFooter">Sobre el Parque</a></li>
                         <li><a href="../pages/entradas.html" class="text-white text-decoration-none aNavFooter">Entradas</a></li>
-                        <li><a href="../pages/infoGeneral.html" class="text-white text-decoration-none aNavFooter">Información General</a></li>
                     </ul>
                 </div>
                 <div class="col">
@@ -219,6 +160,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script src="../js/calendario.js"></script>
 </body>
 
 </html>
