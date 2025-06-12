@@ -11,7 +11,8 @@
     <title>Ludorama</title>
     <link rel="icon" type="image/png" href="../img/favicon_v4.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
 <body class="d-flex flex-column min-vh-100 no-background">
@@ -60,45 +61,47 @@
             </div>
         </nav>
     </header>
-    <!-- HERO PRINCIPAL -->
-    <section class="hero-ludorama d-flex align-items-center justify-content-center text-center text-white">
-        <div class="hero-content">
-            <h1 class="display-4 fw-bold">Viví la aventura en Ludorama</h1>
-            <p class="lead">Un parque temático para jugar, soñar y crear en familia</p>
-        </div>
-    </section>
 
     <main class="p-2 flex-grow-2 contenedor-construccion">
-        <!-- SECCIÓN 1 - Foto izquierda, texto derecha -->
+    
         <section class="container my-5">
-            <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="../img/familia-jugando.png" alt="Familia jugando en Ludorama" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-md-6">
-                <h2 class="fw-bold">Descubrí el mundo de Ludorama</h2>
-                <p>
-                Ludorama es mucho más que un parque: es una invitación a jugar, descubrir y compartir momentos inolvidables en familia.
-                Nuestra propuesta está pensada para todas las edades.
-                </p>
-            </div>
-            </div>
-        </section>
+            
+            <h2 class="fw-bold text-center p-3">Sobre el Parque</h2>
+            <div class="row align-items-stretch">
+                <div class="col-lg-10">
+                            <div class="ticket-card p-4 border rounded bg-light">
+                                <strong><h5 class="fw-bold text-center">¿Cómo llegar a Ludorama?</h5></strong>
+                                <p class="h6">Ubicación:<br>
+                                                Ludorama se encuentra estratégicamente ubicado cerca de la Costanera Norte de la Ciudad Autónoma de Buenos Aires, en una zona de fácil acceso tanto para quienes vienen desde el centro como desde zonas suburbanas.<br><br>
 
-        <!-- SECCIÓN 2 - Texto izquierda, foto derecha -->
-        <section class="container my-5">
-                <div class="row align-items-center flex-md-row-reverse">
-                <div class="col-md-6">
-                    <img src="../img/niños-jugando-jenga.png" alt="Niños jugando en Ludorama" class="img-fluid rounded shadow">
+                                                🚗 En auto:<br>
+                                                Podés llegar por Av. Rafael Obligado (Costanera Norte), con ingreso directo a través de calles señalizadas. Contamos con playa de estacionamiento con capacidad para vehículos particulares, combis escolares y transporte turístico.<br><br>
+
+                                                🚍 En transporte público:<br>
+                                                Colectivos cercanos: Líneas 33, 37, 45, 160<br>
+                                                Estaciones de tren más cercanas: Belgrano C (Ferrocarril Mitre)<br>
+                                                Bicicletas: Hay estaciones de Ecobici a pocas cuadras del ingreso.<br><br>
+
+                                                📌 Referencias cercanas:<br>
+                                                A pocos minutos del Aeroparque Jorge Newbery, y frente al Río de la Plata, Ludorama combina naturaleza, vista abierta y un entorno ideal para pasar el día al aire libre.<br>
+                                </p>
+
+                            </div>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="fw-bold">Experiencias para todos</h2>
-                    <p>
-                    Desde zonas de desafíos hasta espacios de descanso, en Ludorama hay propuestas para todas las personas:
-                    grandes, chicos, en grupo o en soledad. ¡Viví la magia del juego sin límites!
-                    </p>
+
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="calendario-container p-4 border rounded bg-light">
+                            <h2 id="mes-actual"></h2>
+                            <div id="calendario" class="calendario-grid"></div>
+                        </div>
+                    </div>
                 </div>
-                </div>
+
+                
+            </div>
+
+
         </section>
 
     </main>
@@ -129,8 +132,6 @@
                         <li><a href="../index.html" class="text-white text-decoration-none aNavFooter">Inicio</a></li>
                         <li><a href="../pages/sobre.html" class="text-white text-decoration-none aNavFooter">Sobre el Parque</a></li>
                         <li><a href="../pages/entradas.html" class="text-white text-decoration-none aNavFooter">Entradas</a></li>
-                        <li><a href="../pages/infoGeneral.html" class="text-white text-decoration-none aNavFooter">Información General</a></li>
-
                     </ul>
                 </div>
                 <div class="col">
@@ -159,6 +160,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script src="../js/calendario.js"></script>
 </body>
 
 </html>

@@ -44,3 +44,45 @@ footer{
 }
 
 
+
+/*----Calendario----*/
+.calendario-container {
+  width: 50%;
+  /*max-width: 600px;*/
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  /*background: #f9f9ff;*/
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+.calendario-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.calendario-grid div {
+  padding: 10px;
+  border-radius: 8px;
+  background: #e0e0e0;
+  font-weight: bold;
+}
+
+.habilitado {
+  background-color: #c7f5d3;
+  color: #146c2d;
+}
+
+.feriado {
+  background-color: #f8c7c7;
+  color: #8b0000;
+}
+
+.vacio {
+  background-color: transparent;
+}
