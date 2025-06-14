@@ -1,5 +1,11 @@
 
-let cart = [];
+document.addEventListener("DOMContentLoaded", () => {
+  updateCartUI();
+});
+
+//let cart = [];
+let cart = cargarCarritoDesdeStorage();
+
 
 function addToCart(name, price) {
   const item = cart.find(i => i.name === name);
@@ -8,7 +14,17 @@ function addToCart(name, price) {
   } else {
     cart.push({ name, price, quantity: 1 });
   }
+  guardarCarritoEnStorage();
   updateCartUI();
+}
+
+function guardarCarritoEnStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function cargarCarritoDesdeStorage() {
+  const stored = localStorage.getItem("cart");
+  return stored ? JSON.parse(stored) : [];
 }
 
 function updateCartUI() {
@@ -30,5 +46,6 @@ function clearToCart() {
   const total = document.getElementById('total'); 
   total.textContent = '0';
 
-  cart = [];
+  cart = []; 
+  guardarCarritoEnStorage();
 }

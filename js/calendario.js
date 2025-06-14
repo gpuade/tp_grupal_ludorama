@@ -95,7 +95,7 @@ const feriados = [16,20];
 // Agregar espacios vacíos al principio
 for (let i = 0; i < offsetInicio; i++) {
     const div = document.createElement("div");
-    div.className = "dia vacio";
+    div.className = "dia_vacio";
     calendario.appendChild(div);
 }
 

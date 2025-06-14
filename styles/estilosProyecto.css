@@ -47,42 +47,58 @@ footer{
 
 /*----Calendario----*/
 .calendario-container {
-  width: 50%;
-  /*max-width: 600px;*/
-  margin: auto;
+  margin: 0.1em;
   font-family: 'Segoe UI', sans-serif;
   /*background: #f9f9ff;*/
-  padding: 1rem;
-  border-radius: 12px;
+  padding: 0.2em;
+  border-radius: 1em;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
 }
-
+.encabezado{
+  font-size: 0.8em;
+  border-radius: 0.8em;
+  padding: 0.2em;
+}
+.dia_vacio{
+  font-size: 0.8em;
+  border-radius: 0.8em;
+  padding: 0.2em;
+}
 
 .calendario-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  margin-top: 10px;
+  gap: 0.5em;
+  margin-top: 1em;
 }
 
 .calendario-grid div {
-  padding: 10px;
-  border-radius: 8px;
+  padding: 0.3em;
+  border-radius: 0.8em;
   background: #e0e0e0;
   font-weight: bold;
 }
 
 .habilitado {
+  font-size: 0.8em;
+  border-radius: 0.8em;
+  padding: 0.2em;
   background-color: #c7f5d3;
   color: #146c2d;
 }
 
 .feriado {
+  font-size: 0.8em;
+  border-radius: 0.8em;
+  padding: 0.2em;
   background-color: #f8c7c7;
   color: #8b0000;
 }
 
 .vacio {
+  font-size: 0.8em;
+  border-radius: 0.8em;
+  padding: 0.2em;
   background-color: transparent;
 }
